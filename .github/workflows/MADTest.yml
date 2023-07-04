@@ -36,6 +36,13 @@ jobs:
           ls
           cd testDirectory
           go test -v
+          
+      - name: Setup Java 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: "17"
+          distribution: "semeru"
+          
       - name: Make gradlew executable
         run: chmod +x ./gradlew
   
